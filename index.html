@@ -1,0 +1,364 @@
+<!doctype html><html lang="ja"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><title>朝野ナツ 活動手帳</title><meta name="description" content="朝野ナツさんのライブ・撮影会・チェキ会などの予定をまとめた、ファン手作りの活動手帳です。"></head><body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;800&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
+<style id="css">
+/* イイトコドリ対バン手帳と同じ「チケット半券」型のカード。ナツさんのオレンジを主役に */
+:root{--spark:#F5B400;--glow:#FFD9B3;--bg:#FFF3E8;--card:#FFFFFF;--ink:#3A2210;--sub:#86603F;--line:#F6D9BE;--accent:#EE7310;--live:#EE7310;--photo:#E0457F;--cheki:#9C5BD1;--web:#1C8FD0;--special:#1C8FD0;--anniv:#B8860B;--release:#0F9488;--visit:#5C6BC0;--event:#5E8C3A;--sat:#1C8FD0;--sun:#E0457F}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--spark:#FFD45C;--glow:#5A3212;--bg:#1A1008;--card:#2A1B0F;--ink:#F2E4D4;--sub:#C9A580;--line:#4A3220;--accent:#FF9A3C;--live:#FF9A3C;--photo:#F27AA6;--cheki:#C49AF0;--web:#5FB4E6;--special:#5FB4E6;--anniv:#E8C04A;--release:#4FD1C0;--visit:#9FA8DA;--event:#9BC77A;--sat:#5FB4E6;--sun:#F27AA6;color-scheme:dark}}
+:root[data-theme="dark"]{--spark:#FFD45C;--glow:#5A3212;--bg:#1A1008;--card:#2A1B0F;--ink:#F2E4D4;--sub:#C9A580;--line:#4A3220;--accent:#FF9A3C;--live:#FF9A3C;--photo:#F27AA6;--cheki:#C49AF0;--web:#5FB4E6;--special:#5FB4E6;--anniv:#E8C04A;--release:#4FD1C0;--visit:#9FA8DA;--event:#9BC77A;--sat:#5FB4E6;--sun:#F27AA6;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:radial-gradient(120% 60% at 85% 0%,var(--glow) 0%,transparent 60%) var(--bg);background-attachment:fixed;color:var(--ink);font-family:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif;font-size:16px;line-height:1.6}
+.wrap{max-width:640px;margin:0 auto;padding-inline:16px;padding-block:20px 120px}
+header.hd{display:flex;align-items:center;gap:8px}
+header.hd .girl{margin-inline:auto}
+header h1{color:var(--accent);font-family:"M PLUS Rounded 1c","Hiragino Maru Gothic ProN",sans-serif;font-weight:800;font-size:1.9rem;line-height:1.15;margin:8px 0 4px;letter-spacing:.02em}
+.note{margin:6px 0 0;color:var(--sub);font-size:.8rem;line-height:1.5}
+.girl.halloween,.girl.halloween .al,.girl.halloween .ar{animation-duration:3.8s}
+.girl .hw{display:none}.girl.halloween .hw{display:inline}.girl.halloween .nhw{display:none}
+.girl .sleeve{stroke:#FB8C00}.girl .dress{fill:#FB8C00}.girl .belt{fill:#C25E00}.girl .leg{stroke:#F8DCC8}.girl .shoe{fill:#FFFFFF}
+.girl.halloween .sleeve{stroke:#F8DCC8;stroke-width:3.4}.girl.halloween .dress{fill:#8E1426}.girl.halloween .belt{fill:#1A0A0E}.girl.halloween .leg{stroke:#1A1A1A}.girl.halloween .shoe{fill:#1A1A1A}
+header.hd.halloween{background:linear-gradient(170deg,#141029 0%,#2A1B47 60%,#3B2050 100%);border-radius:18px;padding:16px 14px 12px;margin-top:6px;overflow:hidden}
+header.hd.halloween .sparkles{display:none}
+header.hd.halloween .tagline{color:#F3E9FF}
+.night{display:none;position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+header.hd.halloween .night{display:block}
+.night .moon{position:absolute;right:5%;top:10%;width:30px;height:30px;border-radius:50%;background:#FFE7A3;box-shadow:0 0 18px 4px rgba(255,231,163,.45)}
+.night i{position:absolute;width:2px;height:2px;border-radius:50%;background:#FFF6D8;opacity:.7;animation:tw 3s ease-in-out infinite alternate}
+.night i:nth-child(odd){animation-delay:-1.5s}
+@keyframes tw{from{opacity:.25}to{opacity:.9}}
+.night .bat{position:absolute;display:block;width:24px;animation:flyR linear infinite}
+.night .bat svg{display:block;width:100%;animation:flap .22s ease-in-out infinite alternate;transform-origin:50% 40%}
+@keyframes flyR{0%{left:-12%;transform:translateY(0)}25%{transform:translateY(-8px)}50%{transform:translateY(6px)}75%{transform:translateY(-5px)}100%{left:108%;transform:translateY(0)}}
+@keyframes flap{from{transform:scaleY(1)}to{transform:scaleY(.35)}}
+.night .ghost{position:absolute;display:block;width:30px;animation:drift ease-in-out infinite}
+.night .ghost svg{display:block;width:100%;animation:wob 2.2s ease-in-out infinite alternate}
+@keyframes drift{0%{left:106%;transform:translateY(0)}30%{transform:translateY(-10px)}60%{transform:translateY(4px)}100%{left:-12%;transform:translateY(0)}}
+@keyframes wob{from{transform:rotate(-4deg) translateY(1px)}to{transform:rotate(4deg) translateY(-1px)}}
+@media (prefers-reduced-motion:reduce){.night .bat,.night .ghost{animation:none;left:40%}.night .bat svg,.night .ghost svg,.night i{animation:none}}
+.sparkles{position:absolute;inset:-18px -4px -6px;pointer-events:none;z-index:0}
+header.hd{position:relative}
+header.hd .ttlbox,header.hd .girl{position:relative;z-index:1}
+.tagline{margin:4px 0 0;font-family:"M PLUS Rounded 1c","Hiragino Maru Gothic ProN",sans-serif;font-weight:800;font-size:.95rem;line-height:1.4;color:var(--ink);letter-spacing:.03em}
+.sparkles i{position:absolute;display:block;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);opacity:0;animation:twinkle 3.5s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.4) rotate(0)}50%{opacity:1;transform:scale(1.15) rotate(45deg);filter:drop-shadow(0 0 4px var(--spark))}}
+@media (prefers-reduced-motion:reduce){.sparkles i{animation:none;opacity:.5}}
+.sns{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.sns a{display:inline-block;padding:5px 12px;border-radius:999px;border:2px solid var(--accent);color:var(--accent);background:var(--card);font-weight:700;font-size:.82rem;text-decoration:none}
+.next{margin:20px 0 8px;font-family:"M PLUS Rounded 1c",sans-serif;font-weight:800;font-size:1.05rem}
+.next b{color:var(--accent);font-size:2.4rem;line-height:1;margin:0 4px}
+.filters{display:flex;gap:8px;margin:16px 0;flex-wrap:wrap}
+.filters button{border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 14px;font:inherit;font-size:.9rem;cursor:pointer}
+.filters button[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.live{display:grid;grid-template-columns:76px 1fr;background:var(--card);border-radius:14px;margin:12px 0;overflow:hidden;border:1px solid var(--line);border-left:5px solid var(--c,var(--accent));text-align:left;width:100%;color:inherit}
+.stub{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px 4px;border-right:2px dashed var(--line);font-family:"M PLUS Rounded 1c",sans-serif}
+.stub .m{font-size:.8rem;color:var(--sub)}
+.stub .d{color:var(--accent);font-size:2rem;font-weight:800;line-height:1}
+.stub .w{font-size:.8rem;font-weight:800}
+.stub .w.sun{color:var(--sun)}.stub .w.sat{color:var(--sat)}
+.body{padding:12px 14px;min-width:0}
+.title{font-weight:700;font-size:1.05rem;line-height:1.35}
+.meta{color:var(--sub);font-size:.88rem;margin-top:2px;white-space:pre-line;overflow-wrap:anywhere}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.chip{font-size:.78rem;font-weight:700;border-radius:6px;padding:2px 8px;color:#fff;background:var(--c,var(--accent))}
+.chip.area{background:var(--ink);color:var(--bg)}
+.chip.ticket{background:transparent;color:var(--ink);border:1px solid var(--line);font-weight:400}
+.soon{font-size:.78rem;font-weight:700;color:var(--accent)}
+.live.past{opacity:.55}
+.live.editable{cursor:pointer}
+.tlink{margin-top:8px;padding:8px 10px;border:1px dashed var(--line);border-radius:10px;font-size:.85rem;display:grid;gap:6px}
+.turl{color:var(--sub);word-break:break-all;-webkit-user-select:all;user-select:all;font-size:.78rem}
+.copy{justify-self:start;font:inherit;font-size:.82rem;font-weight:700;border:0;border-radius:999px;padding:6px 14px;background:var(--accent);color:#fff;cursor:pointer}
+.maplink{margin-top:8px}
+.maplink a{display:inline-block;padding:6px 14px;border-radius:999px;border:2px solid var(--sat);color:var(--sat);font-weight:700;font-size:.85rem;text-decoration:none;background:var(--card)}
+.empty{text-align:center;color:var(--sub);padding:40px 12px;border:2px dashed var(--line);border-radius:14px;margin-top:12px}
+details.pastbox{margin-top:28px}
+details.pastbox summary{cursor:pointer;color:var(--sub);font-weight:700}
+.add{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--accent);color:#fff;border:0;border-radius:999px;padding:14px 22px;font:inherit;font-weight:700;font-size:1rem;box-shadow:0 6px 18px rgba(238,115,16,.35);cursor:pointer}
+.status{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(84px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:8px 16px;border-radius:999px;font-size:.88rem;opacity:0;transition:opacity .2s;pointer-events:none;max-width:90%}
+.status.show{opacity:1}
+dialog{border:0;border-radius:18px 18px 0 0;padding:0;width:100%;max-width:640px;margin:auto auto 0;background:var(--card);color:var(--ink);max-height:92vh}
+dialog::backdrop{background:rgba(40,20,5,.5)}
+form{padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px));display:grid;gap:12px}
+form h2{margin:0;font-family:"M PLUS Rounded 1c",sans-serif;font-size:1.2rem}
+label{display:grid;gap:4px;font-size:.88rem;font-weight:700}
+input,textarea,select{font:inherit;font-weight:400;font-size:16px;border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--bg);color:var(--ink);width:100%}
+textarea{min-height:64px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.actions{display:flex;gap:10px;justify-content:space-between;margin-top:4px}
+.actions button{font:inherit;font-weight:700;border-radius:10px;padding:10px 16px;cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--ink)}
+.actions .save{background:var(--accent);color:#fff;border-color:var(--accent);flex:1}
+.actions .del{color:var(--photo);border-color:var(--photo)}
+.confirm{font-size:.88rem;color:var(--photo);font-weight:700}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.girl{width:min(40px,10vw);height:auto;overflow:visible;transform-origin:50% 100%;animation:dance 2.4s ease-in-out infinite}
+.girl .arm{transform-box:view-box}
+.girl .al{transform-origin:13px 33px;animation:armL 2.4s ease-in-out infinite}
+.girl .ar{transform-origin:27px 33px;animation:armR 2.4s ease-in-out infinite}
+/* 左右にステップ→くるっと揺れ→ぴょん、の8カウント */
+@keyframes dance{
+  0%{transform:translate(0,0) rotate(0)}
+  12.5%{transform:translate(-5px,-3px) rotate(-10deg)}
+  25%{transform:translate(0,0) rotate(0)}
+  37.5%{transform:translate(5px,-3px) rotate(10deg)}
+  50%{transform:translate(0,0) rotate(0)}
+  62.5%{transform:translate(0,-8px) rotate(0) scaleX(-1)}
+  75%{transform:translate(0,0) rotate(0) scaleX(-1)}
+  87.5%{transform:translate(0,-8px) rotate(0) scaleX(1)}
+  100%{transform:translate(0,0) rotate(0)}}
+@keyframes armL{0%,25%,50%{transform:rotate(0)}12.5%{transform:rotate(-40deg)}37.5%{transform:rotate(30deg)}62.5%,87.5%{transform:rotate(-55deg)}75%,100%{transform:rotate(0)}}
+@keyframes armR{0%,25%,50%{transform:rotate(0)}12.5%{transform:rotate(-30deg)}37.5%{transform:rotate(40deg)}62.5%,87.5%{transform:rotate(55deg)}75%,100%{transform:rotate(0)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.girl,.girl .arm{animation:none}}
+</style>
+<script type="application/json" id="state">{"updated":"2026-10-16","items":[
+{"id":"offkai1012","type":"event","date":"2026-10-12","open":"","start":"18:30","title":"🎃 FC限定ハロウィンオフ会","venue":"浅草橋付近","price":"","url":"https://community.camp-fire.jp/projects/739090/activities/900096","memo":"18:30〜20:30\nナツさん手作りのハロウィンっぽいお菓子あり\nまだ定員募集中、駆け込みも歓迎とのこと\nファンクラブ会員限定です。詳細はファンクラブでご確認ください"},
+{"id": "chekiya-halloween1018", "type": "web", "date": "2026-10-18", "open": "", "start": "23:59", "title": "🛒 今月のチェキ屋さん 🎃 ハロウィン限定チェキ", "venue": "", "price": "", "url": "https://spje.base.shop/items/162915795", "memo": "通販(BASE)。10/18(日)23:59 〆切\n衣装は逆シスター&逆バニー\n【複数同時購入特典】\n・2セット → サインなしブロマイド1枚\n・3セット → サインありブロマイド2枚\n・4セット → サインありブロマイド3枚+イタズラボイスチェキ"},
+{"id":"halloween-cheki1016","type":"cheki","date":"2026-10-16","open":"","start":"19:00","title":"🎃 ハロウィンチェキ会(初開催)","venue":"渋谷区神南1-5-19 ハレ神南7階","price":"入場無料","url":"","memo":"①19:00〜20:15 〜衣装チェンジ〜 ②20:30〜21:45\n会場はSPJの事務所\nナツさん初めてのチェキ会。セクシーなハロウィンコスプレでのチェキ会。気軽に遊びに来てね、とのこと。撮影会やライブはハードルが高いと感じている人にもおすすめとのこと\n【物販】\n・サイン入りチェキ 2,000円(ソロ・ツーショ)\n・30秒間動画撮影 3,000円(ソロ・ツーショ)\n・30秒間写真撮影 1,500円(ソロのみ)\n・ブロマイド2種1セット 1,000円\n⚠️お支払いは現金のみ"},
+{"id":"group-photo1017","type":"photo","date":"2026-10-17","open":"","start":"18:30","title":"朝野ナツ団体撮影会","venue":"チェリッシュスタジオ1号館(渋谷区円山町20-1 新大宗円山ビル別館3階)","price":"撮影会 9,000円/チェキ 2,000円(当日現金)","url":"https://livepocket.jp/e/7drfm","memo":"1部 18:30〜19:30(定員6名)/2部 19:45〜20:45(定員6名)\n1人50秒ずつローテーション。ナツさん単体の撮影はスマホも可。最後にチェキタイムあり\n【予約】LivePocket・先着順、各部1人1枠まで\n10/10(土)21:00〜 FC VIP/10/11(日)21:00〜 FC通常会員/10/12(月)21:00〜 一般\n販売は10/17(土)16:00まで(10/12時点で各部 売切間近)\n会場へのアクセス:https://cherish-studio.com/topic/information-514/"},
+{"id":"hanamaru156","type":"live","date":"2026-10-12","open":"09:20","start":"09:30","title":"はなまるっ Vol.156","venue":"浅草VAMPKIN(台東区浅草2-10 7F)","price":"前方 4,500円/一般 2,500円(+1D)当日各+500円","url":"https://t-dv.com/hanamaru_156","memo":"【イイトコドリ】ライブ15:30〜15:50/特典会15:55〜16:55(Cブース)\n【特典】写メトーク券"},
+{"id":"hanamaru157","type":"live","date":"2026-10-17","open":"09:55","start":"10:10","title":"はなまるっ Vol.157 〜全組25分SP〜","venue":"Otsuka FUTURE:(豊島区北大塚2-13-1 B1F)","price":"前方 4,500円/一般 2,500円(各+1D)当日各+500円","url":"https://t-dv.com/hanamaru_157","memo":"【イイトコドリ】ライブ13:05〜13:30/特典会13:35〜14:35(Bブース)\n【特典】写メ券\n同じ日の夜は渋谷で団体撮影会(18:30〜)"},
+{"id":"futuresuper1018","type":"live","date":"2026-10-18","open":"09:00","start":"09:20","title":"FUTURE: SUPER LIVE 37色のワンダー☆アイドルパーク編","venue":"大塚FUTURE:","price":"前方優先 4,000円/一般 3,000円(各D別)予約のみ・当日払い","url":"https://tiget.net/events/529344","memo":"【イイトコドリ】ライブ13:40〜14:00/特典会14:10〜15:00(Bブース)\n【特典】10秒写メ券"},
+{"id":"mio-birthday1026","type":"anniv","date":"2026-10-26","open":"18:00","start":"18:30","title":"桜木美緒生誕祭","venue":"P.A.R.M.S秋葉原店","price":"最前 12,000円/前方 8,000円/カメラ 5,000円/一般 3,000円","url":"https://livepocket.jp/e/j9hi-","memo":"終演後に物販・特典会あり\n【注意】当日の動画撮影NG"},
+{"id":"kinglymask1122","type":"special","date":"2026-11-22","open":"","start":"16:00","title":"朝野ナツ × KINGLYMASK 1日店長イベント","venue":"KINGLYMASK 原宿本店(渋谷区神宮前3-21-22 フィールドビル1F)","price":"店内で1点以上購入で参加","url":"https://x.com/KINGLY_MASK","memo":"16:00〜18:00\n竹下通り出口から徒歩約3分\n15:30から整理券配布予定(配布は終了45分前まで)。時間内なら並び直し可\n【くじ引き】1点購入ごとに1回(ハズレなし)。ナツさんから手渡し\nA賞 直筆サイン入りミニポスター/B賞 直筆サイン色紙/C賞 非売品アクリルスタンド/D賞 非売品缶バッジ/E賞 非売品ステッカー\n【ランダムチェキ】2点購入ごとに+1,000円で1枚(当たりはサイン入り)。1回10点・チェキ5枚まで\n当日はコラボアイテムの予約販売あり(詳細は後日発表)\n迷ったらレジで伝えると、ナツさんがおすすめを教えてくれるとのこと\n【注意】店内での店長・色紙等の撮影は不可"},
+{"id": "nagoya-kosatsu1101", "type": "photo", "area": "名古屋", "date": "2026-11-01", "open": "", "start": "10:00", "title": "📸 名古屋 個人撮影会(ココカラ撮影会)【完売】", "venue": "アメージングスタジオ(名古屋市中区千代田3-15-12 ISOビル7F)", "price": "個撮 17,000円/1部・チェキ 2,000円/1枚", "url": "https://livepocket.jp/e/nfj26", "memo": "🈵 完売しました(受付開始から約30秒で即完とのこと)\n久しぶりのレアな1対1の個人撮影会。カメラがなくてスマホでもOK、お話だけでもOK\n【時間】45分×5部(各部1名)\n1部 10:00〜10:45/2部 11:00〜11:45/3部 12:00〜12:45\n4部 14:45〜15:30/5部 15:45〜16:30\n【衣装】3種類から選べる(イージーセレクト)\n①私服(冬のデート服を意識 ニット・スカート)\n②シンプル三角ビキニ\n③ハロウィン限定コスプレ\n予約時にココ撮インフォメール(info@cocosatsu.com)へ番号をリクエスト。リクエストがない場合は水着になります\n①のみ、私服から水着への「展開」も可能。あり/なしも一緒に記入(記入例:①展開あり/なし)\n衣装の相談はリプで気軽にとのこと\n【予約】LivePocket・先着順 10/15(木)21:00〜11/1(日)10:00\n【当日の流れ】受付でQRコード提示(チェキ希望はここでチェキ券購入)→45分撮影&チェキ。チェキは終了10分前にアナウンスあり\n【注意】動画撮影NG/キャンセル・払い戻し不可/遅刻しても撮影時間の延長なし\n前日10/31は名古屋でパチンコ来店"},
+{"id": "nagoya-session1101", "type": "photo", "area": "名古屋", "date": "2026-11-01", "open": "", "start": "13:30", "title": "📸 名古屋 セッション撮影会(合同・アイドル衣装)", "venue": "アメージングスタジオ(名古屋市中区千代田3-15-12 ISOビル7F)", "price": "", "url": "https://livepocket.jp/e/brhnx", "memo": "13:30〜14:30(60分)\nイイトコドリの衣装で撮影できる、レアな初企画とのこと\n出演:朝野ナツ・野田ひなた・桃川さあや・松井悠里\n【予約】LivePocket・先着順 10/15(木)21:00〜\n料金はLivePocketでご確認ください"},
+{"id":"pachinko1031","type":"visit","area":"名古屋","date":"2026-10-31","open":"","start":"12:00","title":"パチンコ来店 🎃 ハロウィン当日","venue":"サンシャインKYORAKU平針(名古屋)","price":"","url":"https://x.com/kyorakuhirabari","memo":"12:00〜18:00\n毎月恒例の名古屋のパチンコ来店。ハロウィン当日なので「イタズラしちゃうかも」とのこと\n詳細・告知はお店のX(@kyorakuhirabari)で今週中に発表予定"},
+{"id":"release1220","type":"release","date":"2026-12-20","open":"","start":"16:00","title":"DVD『タイトル未定』発売記念イベント","venue":"ソフマップ(店舗は後日発表)","price":"","url":"","memo":"長野で撮影した新作DVD。12/18(金)発売\n予約:DMM(x.gd/IjwkD)\n詳細は後日あらためて告知予定"},
+{"id":"kurofes2026","type":"live","date":"2026-10-04","open":"08:15","start":"09:30","title":"クロフェス2026(KUROFES 2026)","venue":"稲毛海浜公園プール","price":"","url":"https://ticketdive.com/event/kurofes2026_dashin","memo":""},
+{"id":"chomyojo2026","type":"live","date":"2026-10-07","open":"","start":"17:05","title":"超 明星現象 2026","venue":"Star lounge(渋谷)","price":"","url":"https://t-dv.com/chomyojo_1007","memo":""},
+{"id":"kiteru1009","type":"live","date":"2026-10-09","open":"17:15","start":"17:30","title":"キてるアイドルライブ!!","venue":"大塚FUTURE:","price":"","url":"https://livepocket.jp/e/91zj_","memo":""},
+{"id":"orimoto1011","type":"live","date":"2026-10-11","open":"11:30","start":"12:00","title":"織本杏実バースデーライブ","venue":"BUZZ LIVE SHIBUYA","price":"","url":"https://livepocket.jp/e/idolist20261011","memo":""}
+]}</script>
+<script type="text/html" id="bodytpl">
+<div class="wrap">
+  <header class="hd">
+    <div class="night" aria-hidden="true"><div class="moon"></div><i style="left:6%;top:12%"></i><i style="left:18%;top:70%"></i><i style="left:33%;top:22%"></i><i style="left:47%;top:84%"></i><i style="left:58%;top:10%"></i><i style="left:66%;top:58%"></i><i style="left:79%;top:30%"></i><i style="left:90%;top:78%"></i><i style="left:12%;top:44%"></i><i style="left:52%;top:40%"></i><i style="left:72%;top:88%"></i><i style="left:95%;top:48%"></i><span class="bat" style="top:8%;animation-duration:9s;animation-delay:-3s"><svg viewBox="0 0 24 12"><path d="M12 4 Q10 1 8 3 Q6 0 0 3 Q4 4 4 7 Q6 5 8 7 Q10 5 12 9 Q14 5 16 7 Q18 5 20 7 Q20 4 24 3 Q18 0 16 3 Q14 1 12 4Z" fill="#0B0814"/></svg></span><span class="bat" style="top:46%;animation-duration:12s;animation-delay:-8s;width:20px"><svg viewBox="0 0 24 12"><path d="M12 4 Q10 1 8 3 Q6 0 0 3 Q4 4 4 7 Q6 5 8 7 Q10 5 12 9 Q14 5 16 7 Q18 5 20 7 Q20 4 24 3 Q18 0 16 3 Q14 1 12 4Z" fill="#0B0814"/></svg></span><span class="bat" style="top:70%;animation-duration:7.5s;animation-delay:-1s;width:16px"><svg viewBox="0 0 24 12"><path d="M12 4 Q10 1 8 3 Q6 0 0 3 Q4 4 4 7 Q6 5 8 7 Q10 5 12 9 Q14 5 16 7 Q18 5 20 7 Q20 4 24 3 Q18 0 16 3 Q14 1 12 4Z" fill="#0B0814"/></svg></span><span class="ghost" style="top:18%;animation-duration:17s;animation-delay:-6s"><svg viewBox="0 0 30 20"><path d="M10 2 C4.5 2 1 6 1 10.2 C1 15 5 18 10 18 C14.5 18 17.5 15.6 21 14.4 Q25.5 13 29 16.5 Q27.5 11 23.2 8.6 C21.4 4.2 16.4 2 10 2Z" fill="#FFFFFF" opacity=".93"/><ellipse cx="6.6" cy="8.8" rx="1.2" ry="1.7" fill="#2A2140"/><ellipse cx="11" cy="8.8" rx="1.2" ry="1.7" fill="#2A2140"/><ellipse cx="8.8" cy="13" rx="1.3" ry="1" fill="#2A2140"/><circle cx="4.6" cy="11.6" r="1" fill="#F7A8C4" opacity=".7"/><circle cx="13" cy="11.6" r="1" fill="#F7A8C4" opacity=".7"/></svg></span><span class="ghost" style="top:58%;animation-duration:22s;animation-delay:-15s;width:24px"><svg viewBox="0 0 30 20"><path d="M10 2 C4.5 2 1 6 1 10.2 C1 15 5 18 10 18 C14.5 18 17.5 15.6 21 14.4 Q25.5 13 29 16.5 Q27.5 11 23.2 8.6 C21.4 4.2 16.4 2 10 2Z" fill="#FFFFFF" opacity=".93"/><ellipse cx="6.6" cy="8.8" rx="1.2" ry="1.7" fill="#2A2140"/><ellipse cx="11" cy="8.8" rx="1.2" ry="1.7" fill="#2A2140"/><ellipse cx="8.8" cy="13" rx="1.3" ry="1" fill="#2A2140"/><circle cx="4.6" cy="11.6" r="1" fill="#F7A8C4" opacity=".7"/><circle cx="13" cy="11.6" r="1" fill="#F7A8C4" opacity=".7"/></svg></span></div>
+    <div class="sparkles" aria-hidden="true"><i style="left:7.6%;top:7.2%;width:6px;height:6px;background:var(--spark);animation-delay:0.77s;animation-duration:3.88s"></i><i style="left:16.0%;top:10.3%;width:9px;height:9px;background:var(--photo);animation-delay:0.95s;animation-duration:3.11s"></i><i style="left:23.2%;top:6.6%;width:12px;height:12px;background:var(--spark);animation-delay:3.83s;animation-duration:2.35s"></i><i style="left:37.8%;top:14.0%;width:6px;height:6px;background:var(--photo);animation-delay:1.33s;animation-duration:2.23s"></i><i style="left:50.6%;top:10.0%;width:6px;height:6px;background:var(--spark);animation-delay:0.9s;animation-duration:2.14s"></i><i style="left:60.8%;top:14.8%;width:9px;height:9px;background:var(--spark);animation-delay:2.82s;animation-duration:2.15s"></i><i style="left:71.9%;top:14.2%;width:5px;height:5px;background:var(--photo);animation-delay:2.31s;animation-duration:3.65s"></i><i style="left:84.4%;top:6.5%;width:10px;height:10px;background:var(--spark);animation-delay:3.11s;animation-duration:3.1s"></i><i style="left:90.5%;top:9.9%;width:12px;height:12px;background:var(--photo);animation-delay:3.37s;animation-duration:3.95s"></i><i style="left:8.8%;top:28.9%;width:6px;height:6px;background:var(--spark);animation-delay:2.29s;animation-duration:2.81s"></i><i style="left:18.2%;top:27.0%;width:5px;height:5px;background:var(--spark);animation-delay:0.21s;animation-duration:3.26s"></i><i style="left:28.9%;top:27.6%;width:7px;height:7px;background:var(--accent);animation-delay:3.94s;animation-duration:3.81s"></i><i style="left:34.4%;top:28.1%;width:10px;height:10px;background:var(--photo);animation-delay:2.62s;animation-duration:2.29s"></i><i style="left:45.4%;top:33.1%;width:7px;height:7px;background:var(--photo);animation-delay:3.69s;animation-duration:3.5s"></i><i style="left:55.5%;top:32.4%;width:6px;height:6px;background:var(--spark);animation-delay:3.04s;animation-duration:3.51s"></i><i style="left:71.6%;top:25.0%;width:10px;height:10px;background:var(--accent);animation-delay:3.7s;animation-duration:2.23s"></i><i style="left:84.4%;top:23.2%;width:12px;height:12px;background:var(--spark);animation-delay:0.54s;animation-duration:2.52s"></i><i style="left:89.1%;top:23.8%;width:5px;height:5px;background:var(--photo);animation-delay:3.83s;animation-duration:2.47s"></i><i style="left:7.4%;top:53.7%;width:9px;height:9px;background:var(--accent);animation-delay:2.85s;animation-duration:3.2s"></i><i style="left:16.2%;top:48.8%;width:5px;height:5px;background:var(--photo);animation-delay:1.89s;animation-duration:2.83s"></i><i style="left:25.3%;top:46.9%;width:6px;height:6px;background:var(--spark);animation-delay:0.07s;animation-duration:2.97s"></i><i style="left:34.1%;top:42.7%;width:5px;height:5px;background:var(--spark);animation-delay:2.63s;animation-duration:2.22s"></i><i style="left:49.8%;top:51.2%;width:6px;height:6px;background:var(--spark);animation-delay:0.43s;animation-duration:3.33s"></i><i style="left:59.0%;top:47.3%;width:10px;height:10px;background:var(--accent);animation-delay:3.27s;animation-duration:2.8s"></i><i style="left:72.7%;top:44.6%;width:12px;height:12px;background:var(--spark);animation-delay:0.34s;animation-duration:3.05s"></i><i style="left:84.0%;top:51.2%;width:7px;height:7px;background:var(--accent);animation-delay:3.02s;animation-duration:4.0s"></i><i style="left:95.3%;top:51.1%;width:10px;height:10px;background:var(--accent);animation-delay:2.1s;animation-duration:3.01s"></i><i style="left:8.9%;top:63.2%;width:10px;height:10px;background:var(--spark);animation-delay:3.5s;animation-duration:3.69s"></i><i style="left:19.4%;top:63.5%;width:5px;height:5px;background:var(--spark);animation-delay:0.58s;animation-duration:2.72s"></i><i style="left:24.8%;top:70.8%;width:9px;height:9px;background:var(--spark);animation-delay:2.24s;animation-duration:3.35s"></i><i style="left:37.9%;top:71.2%;width:9px;height:9px;background:var(--spark);animation-delay:0.48s;animation-duration:3.38s"></i><i style="left:46.8%;top:62.0%;width:7px;height:7px;background:var(--photo);animation-delay:0.24s;animation-duration:3.03s"></i><i style="left:59.9%;top:64.9%;width:10px;height:10px;background:var(--photo);animation-delay:1.2s;animation-duration:2.72s"></i><i style="left:71.8%;top:59.9%;width:8px;height:8px;background:var(--accent);animation-delay:2.99s;animation-duration:2.3s"></i><i style="left:83.0%;top:66.9%;width:12px;height:12px;background:var(--spark);animation-delay:0.31s;animation-duration:2.01s"></i><i style="left:90.7%;top:61.5%;width:12px;height:12px;background:var(--photo);animation-delay:2.55s;animation-duration:2.52s"></i><i style="left:8.7%;top:87.3%;width:12px;height:12px;background:var(--spark);animation-delay:0.7s;animation-duration:3.78s"></i><i style="left:12.9%;top:86.2%;width:10px;height:10px;background:var(--spark);animation-delay:1.55s;animation-duration:3.43s"></i><i style="left:28.7%;top:81.6%;width:9px;height:9px;background:var(--accent);animation-delay:3.08s;animation-duration:2.64s"></i><i style="left:35.7%;top:85.3%;width:8px;height:8px;background:var(--photo);animation-delay:3.76s;animation-duration:2.77s"></i><i style="left:50.6%;top:84.2%;width:5px;height:5px;background:var(--spark);animation-delay:0.85s;animation-duration:3.23s"></i><i style="left:60.4%;top:83.2%;width:10px;height:10px;background:var(--spark);animation-delay:1.72s;animation-duration:3.01s"></i><i style="left:72.2%;top:81.7%;width:7px;height:7px;background:var(--spark);animation-delay:3.19s;animation-duration:3.88s"></i><i style="left:82.1%;top:89.9%;width:9px;height:9px;background:var(--accent);animation-delay:3.82s;animation-duration:2.58s"></i><i style="left:89.6%;top:91.4%;width:8px;height:8px;background:var(--spark);animation-delay:2.35s;animation-duration:2.14s"></i><i style="left:4.2%;top:2.7%;width:6px;height:6px;background:var(--spark);animation-delay:2.5s;animation-duration:3.05s"></i><i style="left:16.9%;top:9.6%;width:6px;height:6px;background:var(--spark);animation-delay:0.9s;animation-duration:3.9s"></i><i style="left:24.9%;top:6.2%;width:7px;height:7px;background:var(--spark);animation-delay:2.68s;animation-duration:2.28s"></i><i style="left:31.4%;top:11.5%;width:7px;height:7px;background:var(--spark);animation-delay:0.24s;animation-duration:3.81s"></i><i style="left:43.3%;top:2.8%;width:6px;height:6px;background:var(--photo);animation-delay:3.68s;animation-duration:3.98s"></i><i style="left:55.3%;top:0.4%;width:8px;height:8px;background:var(--photo);animation-delay:2.82s;animation-duration:3.02s"></i><i style="left:63.1%;top:6.9%;width:8px;height:8px;background:var(--accent);animation-delay:0.05s;animation-duration:2.25s"></i><i style="left:74.2%;top:9.1%;width:6px;height:6px;background:var(--photo);animation-delay:0.42s;animation-duration:3.03s"></i><i style="left:81.0%;top:9.9%;width:8px;height:8px;background:var(--photo);animation-delay:1.46s;animation-duration:2.05s"></i><i style="left:93.5%;top:8.0%;width:9px;height:9px;background:var(--accent);animation-delay:2.49s;animation-duration:2.78s"></i></div>
+    <div class="ttlbox"><h1>朝野ナツ<br>活動手帳</h1></div>
+    <svg class="girl" viewBox="0 0 40 84" aria-hidden="true">
+<g class="hw">
+<path d="M12 31 Q2 22 -3 25 Q1 27 -1 30 Q3 30 1 34 Q5 33 4 37 Q8 35 8 39 Q11 36 13 40 Z" fill="#141018"/>
+<path d="M28 31 Q38 22 43 25 Q39 27 41 30 Q37 30 39 34 Q35 33 36 37 Q32 35 32 39 Q29 36 27 40 Z" fill="#141018"/>
+<path d="M9.5 17 Q8 30 10 40 L14 40 L13 22 Z M30.5 17 Q32 30 30 40 L26 40 L27 22 Z" fill="#1E1410"/>
+</g>
+<g class="arm al"><line class="sleeve" x1="13" y1="33" x2="7" y2="24" stroke-width="6" stroke-linecap="round"/><circle cx="6" cy="21.5" r="2.4" fill="#F8DCC8"/></g>
+<g class="arm ar"><line class="sleeve" x1="27" y1="33" x2="33" y2="24" stroke-width="6" stroke-linecap="round"/><circle cx="34" cy="21.5" r="2.4" fill="#F8DCC8"/></g>
+<line x1="16.5" y1="54" x2="16.5" y2="72" class="leg" stroke-width="3.6" stroke-linecap="round"/>
+<line x1="23.5" y1="54" x2="23.5" y2="72" class="leg" stroke-width="3.6" stroke-linecap="round"/>
+<rect x="12.1" y="72" width="8" height="5" rx="1.6" class="shoe" stroke="#C9CED6" stroke-width=".6"/><rect x="20.1" y="72" width="8" height="5" rx="1.6" class="shoe" stroke="#C9CED6" stroke-width=".6"/>
+<path class="dress" d="M12 30 L28 30 L31 56 L9 56 Z"/>
+<rect class="belt" x="10.4" y="45" width="19.2" height="3.2"/>
+<path class="nhw" d="M16.8 30 L20 41 L23.2 30" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linejoin="round"/>
+<g class="hw">
+<path d="M17 45.4 L23 47.8 M23 45.4 L17 47.8" stroke="#2A0A10" stroke-width=".7"/>
+<path d="M8.6 55 L10 58.4 L11.6 55.6 L13.2 58.6 L14.8 55.6 L16.4 58.6 L18 55.6 L19.6 58.6 L21.2 55.6 L22.8 58.6 L24.4 55.6 L26 58.6 L27.6 55.6 L29.2 58.4 L31.4 55 Z" fill="#111"/>
+<path d="M20 31.5 L20 37 M18.3 33.2 L21.7 33.2" stroke="#D8DDE3" stroke-width="1" stroke-linecap="round"/>
+</g>
+<circle cx="20" cy="17" r="11.5" fill="#3B2416"/>
+<circle cx="20" cy="19" r="8.6" fill="#F8DCC8"/>
+<path d="M11.4 17 Q13 8 20 8 Q27 8 28.6 17 Q24.5 12.5 20 13.6 Q15.5 12.5 11.4 17 Z" fill="#3B2416"/>
+<circle cx="16.6" cy="20" r="1.25" fill="#3B2416"/><circle cx="23.4" cy="20" r="1.25" fill="#3B2416"/>
+<circle cx="14.6" cy="23" r="1.6" fill="#F48FB1" opacity=".55"/><circle cx="25.4" cy="23" r="1.6" fill="#F48FB1" opacity=".55"/>
+<path d="M18 23.6 Q20 25.4 22 23.6" fill="none" stroke="#B5533C" stroke-width="1.1" stroke-linecap="round"/>
+<rect class="hw" x="15" y="27.4" width="10" height="2" rx="1" fill="#111"/>
+<path class="nhw" d="M27 6.5 l3.5 -2 l0 4.5 z M27 6.5 l-3.5 -2 l0 4.5 z" fill="#FB8C00"/>
+<g class="hw">
+<path d="M10 9.5 Q14 6 21 6.5 Q28 6 31 9.5" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M12.5 8.6 Q7 5 9.5 -3.5 Q10.6 2.5 15.8 6.8 Z" fill="#B3121F"/>
+<path d="M27.5 8.6 Q33 5 30.5 -3.5 Q29.4 2.5 24.2 6.8 Z" fill="#B3121F"/>
+<path d="M10.6 5 Q9.8 1.5 10.2 -1" stroke="#FF6B78" stroke-width=".7" fill="none" stroke-linecap="round"/>
+<path d="M29.4 5 Q30.2 1.5 29.8 -1" stroke="#FF6B78" stroke-width=".7" fill="none" stroke-linecap="round"/>
+</g>
+</svg>
+  </header>
+  <p class="note">ファンが作った非公式の手帳です。ナツさん本人のSNSと、イイトコドリ・みんなtoお友だちの公式X(グループの告知)をもとに手作業で更新しているので、反映が遅れることがあります。最新の情報はそれぞれの公式発表でご確認ください。<br>最終更新 <span id="upd"></span></p>
+  <div class="sns">
+    <a href="https://x.com/asano_72" target="_blank" rel="noopener">ナツさんのX</a>
+    <a href="https://www.instagram.com/asano_72/" target="_blank" rel="noopener">ナツさんのInstagram</a>
+    <a href="https://x.com/itoko_staff" target="_blank" rel="noopener">イイトコドリのX</a>
+    <a href="https://x.com/minnato_friends" target="_blank" rel="noopener">みんなtoお友だちのX</a>
+  </div>
+  <div class="filters" id="filters" role="group" aria-label="種類で絞り込み"></div>
+  <div id="list"></div>
+  <details class="pastbox" id="pastbox"><summary id="pastsum">これまでの活動</summary><div id="past"></div></details>
+</div>
+<button type="button" class="add" id="addBtn" hidden>＋ 予定を追加</button>
+<div class="status" id="status" role="status"></div>
+<dialog id="dlg">
+  <form id="form">
+    <h2 id="formTitle">予定を追加</h2>
+    <div class="row">
+      <label>日付<input type="date" name="date" id="f-date" required></label>
+      <label>種類<select name="type" id="f-type"><option value="live">ライブ</option><option value="photo">撮影会</option><option value="cheki">チェキ会</option><option value="web">チェキ屋</option><option value="visit">パチンコ</option><option value="event">オフ会</option><option value="release">リリイベ</option><option value="special">1日店長</option><option value="anniv">生誕祭</option></select></label>
+    </div>
+    <div class="row">
+      <label>開場・集合<input type="time" name="open" id="f-open"></label>
+      <label>開演・開始<input type="time" name="start" id="f-start"></label>
+    </div>
+    <label>タイトル<input type="text" name="title" id="f-title" placeholder="例:クリームセッション撮影会"></label>
+    <label>会場<input type="text" name="venue" id="f-venue" placeholder="例:秋葉原Gスタ"></label>
+    <div class="row">
+      <label>料金<input type="text" name="price" id="f-price" placeholder="例:前売3,000円"></label>
+      <label>URL<input type="url" name="url" id="f-url" placeholder="https://"></label>
+    </div>
+    <label>メモ(特典・販売開始日など)<textarea name="memo" id="f-memo"></textarea></label>
+    <div class="confirm" id="delConfirm" hidden>もう一度「削除」を押すと消えます</div>
+    <div class="actions">
+      <button type="button" class="del" id="delBtn" hidden>削除</button>
+      <button type="button" id="cancelBtn">やめる</button>
+      <button type="submit" class="save">保存する</button>
+    </div>
+  </form>
+</dialog>
+</script>
+<div id="root"></div>
+<script id="app">
+(function(){
+  var state; try { state = JSON.parse(document.getElementById('state').textContent); } catch(e) { state = {items:[]}; }
+  if (!Array.isArray(state.items)) state.items = [];
+  var CSS = document.getElementById('css').textContent;
+  var APP = document.getElementById('app').textContent;
+  var BODY_TPL = document.getElementById('bodytpl').textContent;
+  document.getElementById('root').innerHTML = BODY_TPL;
+  try { if (new Date().getMonth()===9) { document.querySelector('.girl').classList.add('halloween'); document.querySelector('header.hd').classList.add('halloween'); } } catch(e){}
+  var TYPES = {live:'ライブ',photo:'撮影会',cheki:'チェキ会',web:'チェキ屋',visit:'パチンコ',event:'オフ会',release:'リリイベ',special:'1日店長',anniv:'生誕祭'};
+  var filter = 'all', editingId = null, artifactApi = null, canEditPage = false, delArmed = false;
+  try { filter = localStorage.getItem('natsu-filter') || 'all'; } catch(e){}
+  if (filter!=='all' && !TYPES[filter]) filter='all';
+
+  var W = ['日','月','火','水','木','金','土'];
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function todayStr(){ var d=new Date(); return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
+  function daysUntil(ds){ return Math.round((new Date(ds+'T00:00:00')-new Date(todayStr()+'T00:00:00'))/86400000); }
+  function fmtJ(ds){ var d=new Date(ds+'T00:00:00'); return (d.getMonth()+1)+'月'+d.getDate()+'日('+W[d.getDay()]+')'; }
+  function esc(s){ return String(s||'').replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+  function safeUrl(u){ return /^https?:\/\//i.test(u||'') ? u : ''; }
+
+  function card(l, past){
+    var d = new Date(l.date+'T00:00:00'), w = d.getDay(), n = daysUntil(l.date);
+    var t = TYPES[l.type] ? l.type : 'event';
+    var soon = !past ? (n===0?'今日!':n===1?'明日!':'あと'+n+'日') : '';
+    var times = [l.open?'開場 '+esc(l.open):'', l.start?'開演 '+esc(l.start):''].filter(Boolean).join(' / ');
+    var u = safeUrl(l.url);
+    var link = u ? '<div class="tlink" data-link><a href="'+esc(u)+'" target="_blank" rel="noopener">詳細・チケットページを開く</a><span class="turl">'+esc(u)+'</span><button type="button" class="copy" data-copy="'+esc(u)+'">リンクをコピー</button></div>' : '';
+    var mq = (l.venue||'').trim();
+    var map = mq ? '<div class="maplink" data-link><a href="https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(mq)+'" target="_blank" rel="noopener">📍 会場の地図を開く</a></div>' : '';
+    return '<div class="live'+(past?' past':'')+(canEditPage?' editable':'')+'" style="--c:var(--'+t+')"'+(canEditPage?' role="button" tabindex="0"':'')+' data-id="'+esc(l.id)+'">'+
+      '<div class="stub"><span class="m">'+(d.getMonth()+1)+'月</span><span class="d">'+d.getDate()+'</span><span class="w'+(w===0?' sun':w===6?' sat':'')+'">'+W[w]+'</span></div>'+
+      '<div class="body">'+(soon?'<div class="soon">'+soon+'</div>':'')+
+      '<div class="title">'+esc(l.title||'(タイトル未入力)')+'</div>'+
+      ([esc(l.venue),times].filter(Boolean).length?'<div class="meta">'+[esc(l.venue),times].filter(Boolean).join(' / ')+'</div>':'')+
+      '<div class="chips"><span class="chip">'+TYPES[t]+'</span>'+(l.area?'<span class="chip area">'+esc(l.area)+'</span>':'')+(l.price?'<span class="chip ticket">'+esc(l.price)+'</span>':'')+'</div>'+
+      map + link + (l.memo?'<div class="meta">'+esc(l.memo)+'</div>':'') +'</div></div>';
+  }
+
+  var OCCASIONAL = ['event','release','special','anniv'];
+  function render(){
+    var t = todayStr();
+    document.getElementById('upd').textContent = state.updated ? fmtJ(state.updated) : '';
+    var all = state.items.slice().sort(function(a,b){ return (a.date+(a.start||'')).localeCompare(b.date+(b.start||'')); });
+    var upTypes = {}; all.forEach(function(l){ if (l.date >= t) upTypes[l.type]=true; });
+    if (filter!=='all' && OCCASIONAL.indexOf(filter)>=0 && !upTypes[filter]) filter='all';
+    document.querySelectorAll('#filters button').forEach(function(x){ var k=x.dataset.f; x.hidden = OCCASIONAL.indexOf(k)>=0 && !upTypes[k]; });
+    var f = all.filter(function(l){ return filter==='all' || l.type===filter; });
+    var up = f.filter(function(l){ return l.date >= t; });
+    var past = f.filter(function(l){ return l.date < t; }).reverse();
+    document.getElementById('list').innerHTML = up.length ? up.map(function(l){return card(l,false);}).join('') :
+      '<div class="empty">'+(filter==='web'?'いま受付中のチェキ屋さんはありません。<br>毎月の告知が出たら追加します🛒':state.items.length?'この種類の予定はまだありません':'まだ予定が入っていません')+'</div>';
+    document.getElementById('past').innerHTML = past.map(function(l){return card(l,true);}).join('');
+    document.getElementById('pastbox').hidden = past.length===0;
+    var since = all.length ? new Date(all[0].date+'T00:00:00') : null;
+    document.getElementById('pastsum').textContent = 'これまでの活動('+past.length+'件)'+(since?' '+since.getFullYear()+'年'+(since.getMonth()+1)+'月'+since.getDate()+'日から記録':'');
+    document.querySelectorAll('#filters button').forEach(function(x){ x.setAttribute('aria-pressed', x.dataset.f===filter?'true':'false'); });
+  }
+
+  var fl = document.getElementById('filters');
+  fl.innerHTML = [['all','すべて']].concat(Object.keys(TYPES).map(function(k){return [k,TYPES[k]];})).map(function(p){
+    return '<button type="button" data-f="'+p[0]+'" id="flt-'+p[0]+'">'+p[1]+'</button>'; }).join('');
+  fl.addEventListener('click', function(e){ var b=e.target.closest('button'); if(!b) return; filter=b.dataset.f;
+    try{ localStorage.setItem('natsu-filter',filter); }catch(e){} render(); });
+
+  var statusEl = document.getElementById('status'), st;
+  function toast(msg){ statusEl.textContent = msg; statusEl.classList.add('show'); clearTimeout(st); st=setTimeout(function(){statusEl.classList.remove('show');},2600); }
+
+  var RESET = ':root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}';
+  function buildDoc(){
+    var json = JSON.stringify(state).replace(/</g,'\\u003c');
+    return '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>'+RESET+'</style></head><body>'+
+      '<title>朝野ナツ 活動手帳</title>\n<link rel="preconnect" href="https://fonts.googleapis.com">\n'+
+      '<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;800&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">\n'+
+      '<style id="css">'+CSS+'</style>\n'+
+      '<script type="application/json" id="state">'+json+'<\/script>\n'+
+      '<script type="text/html" id="bodytpl">'+BODY_TPL+'<\/script>\n<div id="root"></div>\n'+
+      '<script id="app">'+APP+'<\/script>\n</body></html>';
+  }
+  function persist(){
+    if (!artifactApi){ toast('この画面では保存できません'); return; }
+    state.updated = todayStr();
+    toast('保存しています…');
+    artifactApi.publish(buildDoc()).then(function(){ toast('保存しました'); }).catch(function(err){
+      var c = err && err.code;
+      if (c==='conflict') toast('別の画面で更新されたため、最新の内容を読み込みます');
+      else if (c==='not_writer' || c==='not_granted') toast('この画面は閲覧専用です');
+      else if (c==='rate_limited') toast('保存が混み合っています。少し待ってからもう一度保存してください');
+      else toast('保存に失敗しました。もう一度お試しください');
+    });
+  }
+
+  var dlg = document.getElementById('dlg'), form = document.getElementById('form');
+  function openForm(l){
+    editingId = l ? l.id : null; delArmed = false;
+    document.getElementById('delConfirm').hidden = true;
+    document.getElementById('formTitle').textContent = l ? '予定を編集' : '予定を追加';
+    document.getElementById('delBtn').hidden = !l;
+    form.reset();
+    if (l) ['date','type','open','start','title','venue','price','url','memo'].forEach(function(k){ form.elements[k].value = l[k]||''; });
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open','');
+  }
+  function closeForm(){ if (dlg.close) dlg.close(); else dlg.removeAttribute('open'); }
+  document.getElementById('addBtn').addEventListener('click', function(){ openForm(null); });
+  document.getElementById('cancelBtn').addEventListener('click', closeForm);
+  document.getElementById('delBtn').addEventListener('click', function(){
+    if (!editingId) return;
+    if (!delArmed){ delArmed = true; document.getElementById('delConfirm').hidden = false; return; }
+    state.items = state.items.filter(function(l){ return l.id!==editingId; });
+    closeForm(); render(); persist();
+  });
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var E = form.elements;
+    if (!E.date.value){ E.date.focus(); return; }
+    var rec = { id: editingId || ('n'+Date.now().toString(36)), type:E.type.value, date:E.date.value, open:E.open.value, start:E.start.value,
+      title:E.title.value.trim(), venue:E.venue.value.trim(), price:E.price.value.trim(), url:E.url.value.trim(), memo:E.memo.value.trim() };
+    if (editingId) state.items = state.items.map(function(l){ return l.id===editingId?rec:l; });
+    else state.items.push(rec);
+    closeForm(); render(); persist();
+  });
+
+  function copyText(t){
+    function fallback(){
+      var ta=document.createElement('textarea'); ta.value=t; ta.setAttribute('readonly',''); ta.style.position='fixed'; ta.style.opacity='0';
+      document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0,t.length);
+      var ok=false; try{ ok=document.execCommand('copy'); }catch(e){}
+      document.body.removeChild(ta);
+      toast(ok?'リンクをコピーしました':'コピーできませんでした。URLを長押しして選んでください');
+    }
+    try{ if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function(){ toast('リンクをコピーしました'); }, fallback); else fallback(); }catch(e){ fallback(); }
+  }
+  function onCard(e){
+    var cp = e.target.closest('[data-copy]');
+    if (cp){ if (e.type==='click') copyText(cp.getAttribute('data-copy')); return; }
+    if (e.target.closest('[data-link]') || !canEditPage) return;
+    var c = e.target.closest('.live'); if (!c) return;
+    if (e.type==='keydown'){ if (e.key!=='Enter' && e.key!==' ') return; e.preventDefault(); }
+    var l = state.items.filter(function(x){return x.id===c.dataset.id;})[0];
+    if (l) openForm(l);
+  }
+  ['list','past'].forEach(function(id){ var el=document.getElementById(id); el.addEventListener('click',onCard); el.addEventListener('keydown',onCard); });
+
+  render();
+
+})();
+</script>
+
+</body></html>
