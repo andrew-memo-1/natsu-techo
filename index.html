@@ -226,7 +226,7 @@ a{color:var(--accent)}
   var BODY_TPL = document.getElementById('bodytpl').textContent;
   document.getElementById('root').innerHTML = BODY_TPL;
   try { if (new Date().getMonth()===9) { document.querySelector('.girl').classList.add('halloween'); document.querySelector('header.hd').classList.add('halloween'); } } catch(e){}
-  var TYPES = {live:'ライブ',photo:'撮影会',cheki:'チェキ会',web:'チェキ屋',visit:'パチンコ',event:'オフ会',release:'リリイベ',special:'1日店長',anniv:'生誕祭'};
+  var TYPES = {live:'ライブ',photo:'撮影会',web:'チェキ屋',visit:'パチンコ',cheki:'チェキ会',event:'オフ会',release:'リリイベ',special:'1日店長',anniv:'生誕祭'};
   var filter = 'all', editingId = null, artifactApi = null, canEditPage = false, delArmed = false;
   try { filter = localStorage.getItem('natsu-filter') || 'all'; } catch(e){}
   if (filter!=='all' && !TYPES[filter]) filter='all';
@@ -257,7 +257,7 @@ a{color:var(--accent)}
       map + link + (l.memo?'<div class="meta">'+esc(l.memo)+'</div>':'') +'</div></div>';
   }
 
-  var OCCASIONAL = ['event','release','special','anniv'];
+  var OCCASIONAL = ['cheki','event','release','special','anniv'];
   function render(){
     var t = todayStr();
     document.getElementById('upd').textContent = state.updated ? fmtJ(state.updated) : '';
