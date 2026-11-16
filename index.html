@@ -332,7 +332,7 @@ header.hd .stage{margin-inline:auto;position:relative;z-index:1;display:flex;fle
     var d = new Date(l.date+'T00:00:00'), w = d.getDay(), n = daysUntil(l.date);
     var t = TYPES[l.type] ? l.type : 'event';
     var soon = !past ? (n===0?'今日!':n===1?'明日!':'あと'+n+'日') : '';
-    var times = [l.open?'開場 '+esc(l.open):'', l.start?'開演 '+esc(l.start):''].filter(Boolean).join(' / ');
+    var times = l.type==='web' ? (l.start?'締切 '+esc(l.start):'') : [l.open?'開場 '+esc(l.open):'', l.start?(l.type==='live'||l.type==='release'?'開演 ':'開始 ')+esc(l.start):''].filter(Boolean).join(' / ');
     var u = safeUrl(l.url);
     var link = u ? '<div class="tlink" data-link><a href="'+esc(u)+'" target="_blank" rel="noopener">詳細・チケットページを開く</a><span class="turl">'+esc(u)+'</span><button type="button" class="copy" data-copy="'+esc(u)+'">リンクをコピー</button></div>' : '';
     var mq = (l.venue||'').trim();
