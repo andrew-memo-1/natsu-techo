@@ -74,6 +74,14 @@ header.hd .ttlbox,header.hd .girl{position:relative;z-index:1}
 .empty{text-align:center;color:var(--sub);padding:40px 12px;border:2px dashed var(--line);border-radius:14px;margin-top:12px}
 details.pastbox{margin-top:28px}
 details.pastbox summary{cursor:pointer;color:var(--sub);font-weight:700}
+.pointbox{margin-top:16px;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--live);border-radius:14px;padding:12px 14px}
+.pointbox summary{cursor:pointer;font-weight:700;color:var(--ink)}
+.pointbox p{margin:8px 0;font-size:.85rem;line-height:1.6;color:var(--ink)}
+.pointbox .warn{color:var(--sun);font-weight:700}
+.pointbox table{border-collapse:collapse;width:100%;font-size:.85rem;margin:6px 0}
+.pointbox td{border-top:1px solid var(--line);padding:5px 4px;vertical-align:top}
+.pointbox td:first-child{white-space:nowrap;color:var(--accent);font-weight:700;width:4.5em}
+.pointbox small{color:var(--sub)}
 .add{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--accent);color:#fff;border:0;border-radius:999px;padding:14px 22px;font:inherit;font-weight:700;font-size:1rem;box-shadow:0 6px 18px rgba(238,115,16,.35);cursor:pointer}
 .status{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(84px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:8px 16px;border-radius:999px;font-size:.88rem;opacity:0;transition:opacity .2s;pointer-events:none;max-width:90%}
 .status.show{opacity:1}
@@ -209,6 +217,22 @@ header.hd .stage{margin-inline:auto;position:relative;z-index:1;display:flex;fle
   </div>
   <div class="filters" id="filters" role="group" aria-label="種類で絞り込み"></div>
   <div id="list"></div>
+  <details class="pointbox" id="pointbox"><summary>🏮 イイトコドリ物販のポイントカード</summary>
+    <p>イイトコドリの物販で、お会計3,000円ごとに1pt。貯まったポイントは下の特典と交換できます(ポイントカード限定の特典もあり)。</p>
+    <table>
+      <tr><td>4pt</td><td>写メ券</td></tr>
+      <tr><td>8pt</td><td>30秒トーク延長券</td></tr>
+      <tr><td>15pt</td><td>10秒動画券</td></tr>
+      <tr><td>20pt</td><td>サインありチェキ券</td></tr>
+      <tr><td>25pt</td><td>特典会動画撮影券</td></tr>
+      <tr><td>30pt</td><td>30秒動画券</td></tr>
+      <tr><td>35pt</td><td>私物サイン券</td></tr>
+      <tr><td>40pt</td><td>メッセージ付きブロマイド <small>(メンバー1人を選べる)</small></td></tr>
+      <tr><td>45pt</td><td>サイン付きブロマイド <small>(メンバー全員)</small></td></tr>
+      <tr><td>50pt</td><td>メンバー全員囲み写メ券</td></tr>
+    </table>
+    <p><span class="warn">有効期限はカードの発行日から4か月。</span>期限を過ぎたポイントは全部無効になります。<br>カードをなくしてもポイントの再付与はなし。コピー・転売・譲渡・スタンプの偽造は禁止。<br><small>イイトコドリ公式Xの告知(2026年11月)より</small></p>
+  </details>
   <details class="pastbox" id="pastbox"><summary id="pastsum">これまでの活動</summary><div id="past"></div></details>
 </div>
 <button type="button" class="add" id="addBtn" hidden>＋ 予定を追加</button>
