@@ -357,7 +357,7 @@ header.hd .stage{margin-inline:auto;position:relative;z-index:1;display:flex;fle
       map + link + (l.memo?'<div class="meta">'+esc(l.memo)+'</div>':'') +'</div></div>';
   }
 
-  var OCCASIONAL = ['cheki','event','release','special','mag','dvd'];
+  var OCCASIONAL = ['event','release','special','mag','dvd'];
   function endOf(l){ return l.until||l.date; }
   function render(){
     var t = todayStr();
@@ -371,7 +371,7 @@ header.hd .stage{margin-inline:auto;position:relative;z-index:1;display:flex;fle
     var up = f.filter(function(l){ return endOf(l) >= t; });
     var past = f.filter(function(l){ return endOf(l) < t; }).reverse();
     document.getElementById('list').innerHTML = up.length ? up.map(function(l){return card(l,false);}).join('') :
-      '<div class="empty">'+(filter==='web'?'いま受付中のチェキ屋さんはありません。<br>毎月の告知が出たら追加します🛒':state.items.length?'この種類の予定はまだありません':'まだ予定が入っていません')+'</div>';
+      '<div class="empty">'+(filter==='web'?'いま受付中のチェキ屋さんはありません。<br>毎月の告知が出たら追加します🛒':filter==='cheki'?'次のチェキ会は、12月16日か17日にクリスマスチェキ会の予定とのこと🎄<br>日にちが決まったら追加します':state.items.length?'この種類の予定はまだありません':'まだ予定が入っていません')+'</div>';
     document.getElementById('past').innerHTML = past.map(function(l){return card(l,true);}).join('');
     document.getElementById('pastbox').hidden = past.length===0;
     var since = all.length ? new Date(all[0].date+'T00:00:00') : null;
