@@ -299,7 +299,7 @@ header.hd .stage{margin-inline:auto;position:relative;z-index:1;display:flex;fle
     <h2 id="formTitle">予定を追加</h2>
     <div class="row">
       <label>日付<input type="date" name="date" id="f-date" required></label>
-      <label>種類<select name="type" id="f-type"><option value="live">ライブ</option><option value="photo">撮影会</option><option value="cheki">チェキ会</option><option value="web">チェキ屋</option><option value="shop">コラボロンT</option><option value="visit">パチンコ</option><option value="event">オフ会</option><option value="release">リリイベ</option><option value="special">1日店長</option><option value="dvd">新作DVD</option><option value="mag">掲載誌</option></select></label>
+      <label>種類<select name="type" id="f-type"><option value="live">ライブ</option><option value="photo">撮影会</option><option value="cheki">チェキ会</option><option value="web">チェキ屋</option><option value="shop">コラボアイテム</option><option value="visit">パチンコ</option><option value="event">オフ会</option><option value="release">リリイベ</option><option value="special">1日店長</option><option value="dvd">新作DVD</option><option value="mag">掲載誌</option></select></label>
     </div>
     <div class="row">
       <label>開場・集合<input type="time" name="open" id="f-open"></label>
@@ -331,7 +331,7 @@ header.hd .stage{margin-inline:auto;position:relative;z-index:1;display:flex;fle
   var BODY_TPL = document.getElementById('bodytpl').textContent;
   document.getElementById('root').innerHTML = BODY_TPL;
   try { var cm={9:'halloween',11:'xmas',0:'kimono'}[new Date().getMonth()]; var q=(location.search.match(/[?&]costume=(\w+)/)||[])[1]; if(q==='halloween'||q==='xmas'||q==='kimono'||q==='normal') cm=(q==='normal'?'':q); if (cm) { document.querySelector('.girl').classList.add(cm); document.querySelector('header.hd').classList.add(cm); } } catch(e){}
-  var TYPES = {live:'ライブ',photo:'撮影会',visit:'パチンコ',web:'チェキ屋',cheki:'チェキ会',mag:'掲載誌',dvd:'新作DVD',release:'リリイベ',shop:'コラボロンT',special:'1日店長',event:'オフ会'};
+  var TYPES = {live:'ライブ',photo:'撮影会',visit:'パチンコ',web:'チェキ屋',cheki:'チェキ会',mag:'掲載誌',dvd:'新作DVD',release:'リリイベ',shop:'コラボアイテム',special:'1日店長',event:'オフ会'};
   var filter = 'all', editingId = null, artifactApi = null, canEditPage = false, delArmed = false;
   try { filter = localStorage.getItem('natsu-filter') || 'all'; } catch(e){}
   if (filter!=='all' && !TYPES[filter]) filter='all';
