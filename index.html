@@ -363,7 +363,7 @@ header.hd .stage{margin-inline:auto;position:relative;z-index:1;display:flex;fle
   function render(){
     var t = todayStr();
     document.getElementById('upd').textContent = state.updated ? fmtJ(state.updated) : '';
-    var key=function(l){ return ((l.pin && endOf(l)>=t) ? '0000' : (l.until && l.date<t && l.until>=t ? t : l.date))+(l.start||''); };
+    var key=function(l){ return ((l.pin && endOf(l)>=t) ? '0000' : ((l.until && l.date<t && l.until>=t) || (l.type==='web' && l.saleStart && l.saleStart.slice(0,10)<=t && l.date>t) ? t : l.date))+(l.start||''); };
     var all = state.items.slice().sort(function(a,b){ return key(a).localeCompare(key(b)); });
     var upTypes = {}; all.forEach(function(l){ if (endOf(l) >= t) upTypes[l.type]=true; });
     if (filter!=='all' && OCCASIONAL.indexOf(filter)>=0 && !upTypes[filter]) filter='all';
