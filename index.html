@@ -353,7 +353,7 @@ header.hd .stage{margin-inline:auto;position:relative;z-index:1;display:flex;fle
     var mq = (l.noMap||/後日/.test(l.venue||'')) ? '' : (l.venue||'').trim();
     var map = mq ? '<div class="maplink" data-link><a href="https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(mq)+'" target="_blank" rel="noopener">📍 会場の地図を開く</a></div>' : '';
     return '<div class="live'+(past?' past':'')+(canEditPage?' editable':'')+'" style="--c:var(--'+t+')"'+(canEditPage?' role="button" tabindex="0"':'')+' data-id="'+esc(l.id)+'">'+
-      '<div class="stub"><span class="m">'+(d.getMonth()+1)+'月</span><span class="d">'+d.getDate()+'</span><span class="w'+(w===0?' sun':w===6?' sat':'')+'">'+W[w]+'</span>'+((l.type==='web'||l.type==='shop')?'<span class="dl">(締切)</span>':'')+'</div>'+
+      '<div class="stub"><span class="m">'+(d.getMonth()+1)+'月</span><span class="d">'+d.getDate()+'</span><span class="w'+(w===0?' sun':w===6?' sat':'')+'">'+W[w]+'</span>'+((l.type==='web'||l.type==='shop')?'<span class="dl">(締切)</span>':(l.type==='dvd'||l.type==='mag')?'<span class="dl">(発売日)</span>':'')+'</div>'+
       '<div class="body">'+(soon?'<div class="soon">'+soon+'</div>':'')+
       '<div class="title">'+esc(l.title||'(タイトル未入力)')+'</div>'+
       ([esc(l.venue),times].filter(Boolean).length?'<div class="meta">'+[esc(l.venue),times].filter(Boolean).join(' / ')+'</div>':'')+
