@@ -295,7 +295,7 @@ header.hd .stage{margin-inline:auto;position:relative;z-index:1;display:flex;fle
     <h2 id="formTitle">予定を追加</h2>
     <div class="row">
       <label>日付<input type="date" name="date" id="f-date" required></label>
-      <label>種類<select name="type" id="f-type"><option value="live">ライブ</option><option value="photo">撮影会</option><option value="cheki">チェキ会</option><option value="web">チェキ屋</option><option value="visit">パチンコ</option><option value="event">オフ会</option><option value="release">リリイベ</option><option value="special">1日店長</option><option value="dvd">新作DVD</option><option value="mag">掲載誌</option></select></label>
+      <label>種類<select name="type" id="f-type"><option value="live">ライブ</option><option value="photo">撮影会</option><option value="cheki">チェキ会</option><option value="web">通販</option><option value="visit">パチンコ</option><option value="event">オフ会</option><option value="release">リリイベ</option><option value="special">1日店長</option><option value="dvd">新作DVD</option><option value="mag">掲載誌</option></select></label>
     </div>
     <div class="row">
       <label>開場・集合<input type="time" name="open" id="f-open"></label>
@@ -327,7 +327,7 @@ header.hd .stage{margin-inline:auto;position:relative;z-index:1;display:flex;fle
   var BODY_TPL = document.getElementById('bodytpl').textContent;
   document.getElementById('root').innerHTML = BODY_TPL;
   try { var cm={9:'halloween',11:'xmas',0:'kimono'}[new Date().getMonth()]; var q=(location.search.match(/[?&]costume=(\w+)/)||[])[1]; if(q==='halloween'||q==='xmas'||q==='kimono'||q==='normal') cm=(q==='normal'?'':q); if (cm) { document.querySelector('.girl').classList.add(cm); document.querySelector('header.hd').classList.add(cm); } } catch(e){}
-  var TYPES = {live:'ライブ',photo:'撮影会',web:'チェキ屋',visit:'パチンコ',cheki:'チェキ会',event:'オフ会',release:'リリイベ',special:'1日店長',dvd:'新作DVD',mag:'掲載誌'};
+  var TYPES = {live:'ライブ',photo:'撮影会',web:'通販',visit:'パチンコ',cheki:'チェキ会',event:'オフ会',release:'リリイベ',special:'1日店長',dvd:'新作DVD',mag:'掲載誌'};
   var filter = 'all', editingId = null, artifactApi = null, canEditPage = false, delArmed = false;
   try { filter = localStorage.getItem('natsu-filter') || 'all'; } catch(e){}
   if (filter!=='all' && !TYPES[filter]) filter='all';
@@ -372,7 +372,7 @@ header.hd .stage{margin-inline:auto;position:relative;z-index:1;display:flex;fle
     var up = f.filter(function(l){ return endOf(l) >= t; });
     var past = f.filter(function(l){ return endOf(l) < t; }).reverse();
     document.getElementById('list').innerHTML = up.length ? up.map(function(l){return card(l,false);}).join('') :
-      '<div class="empty">'+(filter==='web'?'いま受付中のチェキ屋さんはありません。<br>毎月の告知が出たら追加します🛒':filter==='cheki'?'次のチェキ会は、12月16日か17日にクリスマスチェキ会の予定とのこと🎄<br>日にちが決まったら追加します':state.items.length?'この種類の予定はまだありません':'まだ予定が入っていません')+'</div>';
+      '<div class="empty">'+(filter==='web'?'いま受付中の通販はありません。<br>告知が出たら追加します🛒':filter==='cheki'?'次のチェキ会は、12月16日か17日にクリスマスチェキ会の予定とのこと🎄<br>日にちが決まったら追加します':state.items.length?'この種類の予定はまだありません':'まだ予定が入っていません')+'</div>';
     document.getElementById('past').innerHTML = past.map(function(l){return card(l,true);}).join('');
     document.getElementById('pastbox').hidden = past.length===0;
     var since = all.length ? new Date(all[0].date+'T00:00:00') : null;
