@@ -60,6 +60,9 @@ header.hd .ttlbox,header.hd .girl{position:relative;z-index:1}
 .next b{color:var(--accent);font-size:2.4rem;line-height:1;margin:0 4px}
 .filters{display:flex;gap:8px;margin:16px 0;flex-wrap:wrap}
 .filters .pair{display:flex;gap:8px}
+.filters button{position:relative}
+.filters button[data-note]::after{content:attr(data-note);position:absolute;top:-9px;right:-6px;font-size:.66rem;font-weight:800;line-height:1;padding:3px 6px;border-radius:999px;background:var(--shop);color:#1A1008;white-space:nowrap;pointer-events:none;box-shadow:0 1px 3px rgba(0,0,0,.35)}
+.filters{padding-top:6px}
 .stub .dl{display:block;font-size:.7rem;font-weight:700;margin-top:2px;color:var(--c)}
 .stub .dl.until{font-size:.95rem}
 .soon:has(.badge){display:flex;align-items:center;flex-wrap:wrap;gap:4px 8px}
@@ -166,7 +169,7 @@ header.hd.xmas .xnight{display:block}
 @media (prefers-reduced-motion:reduce){.xnight .sleigh{animation:none;left:48%;top:12%}.xnight .sleigh svg,.xnight .lf,.xnight .lb,.xnight .wave{animation:none}}
 </style>
 <script type="application/json" id="state">{"updated":"2026-11-22","items":[
-{"id": "kmk-kuji1122", "type": "shop", "date": "2026-11-29", "saleStart": "2026-11-22T18:30", "open": "", "start": "23:59", "title": "🎰 朝野ナツ × KINGLYMASK 限定オンラインくじガチャ", "venue": "", "price": "ハズレなし", "url": "https://kinglymask.tokyo/lotteries/kuji-0257-s1da", "linkLabel": "くじガチャのページを開く", "memo": "1日店長イベントのあとに始まった、WEBで引けるくじガチャ\n🧡ナツさんのXより:今日の店長イベントに来られなかった人や遠方の人も、いつもと違うナツさんのグッズがゲットできる、とのこと\nコラボロンTと同じく11/29(日)23:59まで"},
+{"id": "kmk-kuji1122", "type": "shop", "filterNote": "くじも!", "date": "2026-11-29", "saleStart": "2026-11-22T18:30", "open": "", "start": "23:59", "title": "🎰 朝野ナツ × KINGLYMASK 限定オンラインくじガチャ", "venue": "", "price": "ハズレなし", "url": "https://kinglymask.tokyo/lotteries/kuji-0257-s1da", "linkLabel": "くじガチャのページを開く", "memo": "1日店長イベントのあとに始まった、WEBで引けるくじガチャ\n🧡ナツさんのXより:今日の店長イベントに来られなかった人や遠方の人も、いつもと違うナツさんのグッズがゲットできる、とのこと\nコラボロンTと同じく11/29(日)23:59まで"},
 {"id": "poetry1215", "type": "live", "group": "イイトコドリ", "date": "2026-12-15", "open": "17:30", "start": "17:50", "title": "POETRY×POETRY(ポエトリー×ポエトリー) VOL.2", "venue": "GOTANDA G6(五反田)", "price": "前方優先エリア 3,000円/一般エリア 2,000円(各+1D)", "url": "", "memo": "「届けたい」アイドルグループが集まる一夜\n【イイトコドリ】出演時間は後日発表\nチケット情報・タイムテーブルは後日公開\n出演:Re:IDOL/びびっとキュート/おやすみセカイ/露光時間/桃色革命/Chime de Happy/P!ZZA☆PARTi/イイトコドリ"},
 {"id": "kmk-collab-lt1119", "type": "shop", "date": "2026-11-29", "saleStart": "2026-11-19T18:00", "open": "", "start": "23:59", "title": "🛒 朝野ナツ × KINGLYMASK コラボロンT(WEB予約販売)", "venue": "", "price": "8,778円(税込)", "url": "https://kinglymask.jp/view/item/000000004924", "linkLabel": "公式サイトで予約・購入", "url2": "https://item.rakuten.co.jp/kinglymask/collabo1937pd-top/", "linkLabel2": "楽天で予約・購入", "memo": "ナツさん初のコラボアイテム「コラボスーパー ロング スリーブ Tシャツ」\n🧡ナツさんのXより:大好きなオレンジ色をベースに、オレンジ🍊・向日葵🌻・夏の空をイメージした水色をワンポイントに入れた、こだわりいっぱいのデザイン。お揃いにしてくれたら嬉しいとのこと\nフリーサイズ・男女兼用のビッグシルエット(肩幅63/身幅66/着丈80/袖丈70cm)、綿100%\n🧡ナツさんのXより:着丈がゆったりしていてかなり大きめ。春秋でも着られそうな素材で、体格のいいファンの方も実物を見て着られると言っていたので大丈夫、とのこと\n12月下旬〜2月上旬頃に入荷予定の予約販売\n送料は税込22,000円以上で無料\n11/22の1日店長イベントでも販売予定。WEBで買うと当日「1点購入済み」扱いになります(詳しくは11/22の予定へ)"},
 {"id": "offkai1012", "type": "event", "date": "2026-10-12", "open": "", "start": "18:30", "title": "🎃 FC限定ハロウィンオフ会", "venue": "浅草橋付近", "price": "", "url": "https://community.camp-fire.jp/projects/739090/activities/900096", "memo": "18:30〜20:30\nナツさん手作りのハロウィンっぽいお菓子あり\nまだ定員募集中、駆け込みも歓迎とのこと\nファンクラブ会員限定です。詳細はファンクラブでご確認ください"},
@@ -449,9 +452,9 @@ header.hd.xmas .xnight{display:block}
     document.getElementById('upd').textContent = state.updated ? fmtJ(state.updated) : '';
     var key=function(l){ return ((l.pin && endOf(l)>=t) ? '0000' : ((l.until && l.date<t && l.until>=t) || ((l.type==='web'||l.type==='shop') && l.saleStart && l.saleStart.slice(0,10)<=t && l.date>t) ? t : l.date))+(l.start||''); };
     var all = state.items.slice().sort(function(a,b){ return key(a).localeCompare(key(b)); });
-    var upTypes = {}; all.forEach(function(l){ if (endOf(l) >= t) upTypes[l.type]=true; });
+    var upTypes = {}, notes = {}; all.forEach(function(l){ if (endOf(l) >= t){ upTypes[l.type]=true; if (l.filterNote && (!l.saleStart || l.saleStart.slice(0,10)<=t)) notes[l.type]=l.filterNote; } });
     if (filter!=='all' && OCCASIONAL.indexOf(filter)>=0 && !upTypes[filter]) filter='all';
-    document.querySelectorAll('#filters button').forEach(function(x){ var k=x.dataset.f; x.hidden = OCCASIONAL.indexOf(k)>=0 && !upTypes[k]; });
+    document.querySelectorAll('#filters button').forEach(function(x){ var k=x.dataset.f; x.hidden = OCCASIONAL.indexOf(k)>=0 && !upTypes[k]; if (notes[k]) x.setAttribute('data-note',notes[k]); else x.removeAttribute('data-note'); });
     var f = all.filter(function(l){ return filter==='all' || l.type===filter; });
     var up = f.filter(function(l){ return endOf(l) >= t; });
     var past = f.filter(function(l){ return endOf(l) < t; }).reverse();
