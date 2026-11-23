@@ -450,7 +450,7 @@ header.hd.xmas .xnight{display:block}
   function render(){
     var t = todayStr();
     document.getElementById('upd').textContent = state.updated ? fmtJ(state.updated) : '';
-    var key=function(l){ return ((l.pin && endOf(l)>=t) ? '0000'+(l.pinOrder||0) : ((l.until && l.date<t && l.until>=t) || ((l.type==='web'||l.type==='shop') && l.saleStart && l.saleStart.slice(0,10)<=t && l.date>t) ? t : l.date))+(l.start||''); };
+    var key=function(l){ return ((l.pin && endOf(l)>=t) ? '0000'+(l.pinOrder||0) : (l.date===t) ? '00000T' : ((l.until && l.date<t && l.until>=t) || ((l.type==='web'||l.type==='shop') && l.saleStart && l.saleStart.slice(0,10)<=t && l.date>t) ? t : l.date))+(l.start||''); };
     var all = state.items.slice().sort(function(a,b){ return key(a).localeCompare(key(b)); });
     var upTypes = {}, notes = {}; all.forEach(function(l){ if (endOf(l) >= t){ upTypes[l.type]=true; if (l.filterNote && (!l.saleStart || l.saleStart.slice(0,10)<=t)) notes[l.type]=l.filterNote; } });
     if (filter!=='all' && OCCASIONAL.indexOf(filter)>=0 && !upTypes[filter]) filter='all';
