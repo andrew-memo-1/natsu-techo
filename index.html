@@ -471,7 +471,7 @@ header.hd.xmas .xnight{display:block}
       '<div class="empty">'+(filter==='web'?'いま受付中のチェキ屋さんはありません。<br>毎月の告知が出たら追加します🛒':filter==='shop'?'いま受付中の通販はありません。<br>告知が出たら追加します🛒':filter==='cheki'?'次のチェキ会は、12月16日か17日にクリスマスチェキ会の予定とのこと🎄<br>日にちが決まったら追加します':state.items.length?'この種類の予定はまだありません':'まだ予定が入っていません')+'</div>';
     document.getElementById('past').innerHTML = past.map(function(l){return card(l,true);}).join('');
     document.getElementById('pastbox').hidden = past.length===0;
-    var since = all.length ? new Date(all[0].date+'T00:00:00') : null;
+    var first = all.reduce(function(m,l){ return (!m || l.date<m) ? l.date : m; }, ''); var since = first ? new Date(first+'T00:00:00') : null;
     document.getElementById('pastsum').textContent = 'これまでの活動('+past.length+'件)'+(since?' '+since.getFullYear()+'年'+(since.getMonth()+1)+'月'+since.getDate()+'日から記録':'');
     document.querySelectorAll('#filters button').forEach(function(x){ x.setAttribute('aria-pressed', x.dataset.f===filter?'true':'false'); });
   }
